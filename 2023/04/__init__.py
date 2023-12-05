@@ -30,12 +30,12 @@ def part_one(parsed_data):
 def part_two(parsed_data):
     tmp = copy.deepcopy(parsed_data)
     nums = [1] * len(tmp)
-    total = 0
     while len(tmp) > 0:
         card = tmp.pop(0)
         n_winners = sum(a in card["winning_numbers"] for a in card["actual_numbers"])
         for n in range(n_winners):
             nums[card["id"] + n] += nums[card["id"] - 1]
+
     print(f"  Total number of cards: {sum(nums)}")
 
 
