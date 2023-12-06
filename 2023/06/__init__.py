@@ -1,6 +1,3 @@
-from operator import mul
-
-
 def part_one(data):
     data = data.splitlines()
     times = [int(d) for d in data[0][5:].split()]
