@@ -10,7 +10,7 @@ def part_one(data):
             if j * (times[i] - j) > distances[i]:
                 count += 1
         total *= count
-    print(total)
+    print(f"  Solution: {total}")
 
 
 def part_two(data):
@@ -22,9 +22,11 @@ def part_two(data):
     for j in range(time):
         if j * (time - j) > distance:
             count += 1
-    print(count)
+    print(f"  Solution: {count}")
 
 
 def solution(data):
+    print("Part 1:")
     part_one(data)
+    print("Part 2:")
     part_two(data)
